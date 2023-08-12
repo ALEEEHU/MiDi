@@ -10,10 +10,10 @@ import numpy as np
 import wandb
 from torchmetrics import MeanMetric, MaxMetric
 
-from midi.utils import NoSyncMetric as Metric, NoSyncMetricCollection as MetricCollection
-from midi.analysis.rdkit_functions import check_stability
-from midi.utils import NoSyncMAE as MeanAbsoluteError
-from midi.metrics.metrics_utils import counter_to_tensor, wasserstein1d, total_variation1d
+from utils import NoSyncMetric as Metric, NoSyncMetricCollection as MetricCollection
+from analysis.rdkit_functions import check_stability
+from utils import NoSyncMAE as MeanAbsoluteError
+from metrics.metrics_utils import counter_to_tensor, wasserstein1d, total_variation1d
 
 
 class SamplingMetrics(nn.Module):

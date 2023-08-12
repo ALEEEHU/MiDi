@@ -1,5 +1,5 @@
 import torch
-import midi.utils as utils
+import utils
 
 
 class ExtraFeatures:

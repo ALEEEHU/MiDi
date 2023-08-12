@@ -9,21 +9,21 @@ import pytorch_lightning as pl
 import torchmetrics
 import wandb
 
-from midi.models.transformer_model import GraphTransformer
+from models.transformer_model import GraphTransformer
 # from midi.models.egnn_ablation import GraphTransformer
 # print("RUNNING ABLATION")
-from midi.diffusion.noise_model import DiscreteUniformTransition, MarginalUniformTransition
-from midi.diffusion import diffusion_utils
-from midi.diffusion.diffusion_utils import mask_distributions, sum_except_batch
-from midi.metrics.train_metrics import TrainLoss
-from midi.metrics.abstract_metrics import SumExceptBatchMetric, SumExceptBatchKL, NLL
-from midi import utils
-import midi.analysis.visualization as visualizer
-import midi.metrics.abstract_metrics as custom_metrics
-from midi.metrics.molecular_metrics import TrainMolecularMetrics, SamplingMetrics
-from midi.diffusion.extra_features import ExtraFeatures
-from midi.analysis.rdkit_functions import Molecule
-from midi.datasets.adaptive_loader import effective_batch_size
+from diffusion.noise_model import DiscreteUniformTransition, MarginalUniformTransition
+from diffusion import diffusion_utils
+from diffusion.diffusion_utils import mask_distributions, sum_except_batch
+from metrics.train_metrics import TrainLoss
+from metrics.abstract_metrics import SumExceptBatchMetric, SumExceptBatchKL, NLL
+import utils
+import analysis.visualization as visualizer
+import metrics.abstract_metrics as custom_metrics
+from metrics.molecular_metrics import TrainMolecularMetrics, SamplingMetrics
+from diffusion.extra_features import ExtraFeatures
+from analysis.rdkit_functions import Molecule
+from datasets.adaptive_loader import effective_batch_size
 
 
 class FullDenoisingDiffusion(pl.LightningModule):

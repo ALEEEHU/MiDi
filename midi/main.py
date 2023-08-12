@@ -12,8 +12,8 @@ from pytorch_lightning import Trainer
 from pytorch_lightning.callbacks import ModelCheckpoint
 from pytorch_lightning.utilities.warnings import PossibleUserWarning
 
-from midi.datasets import qm9_dataset, geom_dataset
-from midi.diffusion_model import FullDenoisingDiffusion
+from datasets import qm9_dataset, geom_dataset
+from diffusion_model import FullDenoisingDiffusion
 
 
 warnings.filterwarnings("ignore", category=PossibleUserWarning)

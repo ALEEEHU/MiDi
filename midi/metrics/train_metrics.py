@@ -4,7 +4,7 @@ import time
 import wandb
 
 from torchmetrics import MeanSquaredError
-from midi.metrics.abstract_metrics import CrossEntropyMetric
+from metrics.abstract_metrics import CrossEntropyMetric
 
 class TrainLoss(nn.Module):
     """ Train with Cross entropy"""
